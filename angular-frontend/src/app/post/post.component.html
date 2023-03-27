@@ -1,0 +1,48 @@
+<div class="post-page">
+  <div class="post-main">
+    <p class="timeandcat">#{{ post.category.title }} / {{ creationDate }}</p>
+    <h2>{{ post.title }}</h2>
+    <img src="{{ post.imageSrc }}" alt="" height="350px" width="800px" />
+    <div class="post-author">
+      <div class="post-author-name">
+        <p class="x">
+          <a href="/author"
+            >{{ post.user.firstname }} {{ post.user.lastname }}
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="post-desc" [innerHTML]="post.description"></div>
+    <app-comment/>
+    <!-- <div class="commentbox">
+      <div class="txt">Leave a comment</div>
+      <form class="comment-form" (ngSubmit)="submitcomment()">
+        <div class="sup">
+          <div class="commentform">
+            <textarea
+              id="comment"
+              type="text"
+              name="comment"
+              placeholder="Ex. pat@example.com"
+              (focus)="(true)"
+              [(ngModel)]="form.comment"
+            ></textarea>
+          </div>
+        </div>
+        <button mat-raised-button color="primary" class="commentsubmit">
+          Submit
+        </button>
+      </form>
+      <div>
+        <div class="comments" *ngFor="let c of post.comments">
+          <div class="commenter">
+            {{ c.user.firstname }} {{ c.user.lastname }}
+          </div>
+          <div class="comment">
+            {{ c.body }}
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>

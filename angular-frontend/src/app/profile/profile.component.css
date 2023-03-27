@@ -1,0 +1,48 @@
+.author-posts {
+    display: flex;
+    flex-direction: column;
+    top: 32%;
+    left: 5%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.author-post-card{
+    margin-top: 10px;
+}
+.main-author .post-author {
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    left: 45%;
+    align-items: center;
+}
+
+.main-author .post-author img {
+    margin: 2px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.post-author-name p {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.post-author-name .x {
+    font-size: smaller;
+    color: grey;
+}
+
+.post-author-name .x a {
+    text-decoration: none;
+}
+
+
+.post-author-name .x a {
+    text-decoration: none;
+}
+
+.post-author-name .x a:hover {
+    text-decoration: underline;
+}

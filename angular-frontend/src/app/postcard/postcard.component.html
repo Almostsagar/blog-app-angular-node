@@ -1,0 +1,25 @@
+<div class="card-grid">
+  <div class="card-main" *ngFor="let item of itemCount">
+    <img
+      src="{{item.imageSrc}}"
+      alt=""
+      srcset=""
+      height="180px"
+      width="100px"
+    />
+    <h3 class="card-title">
+      {{item.title}}
+    </h3>
+    <p class="card-category" [routerLink]="['/', 'category', item.category._id]" [state]="{ id:item.category._id}">{{item.category.title}}</p>
+    <!-- <div class="card-desc">
+      {{item.description | truncate:[20, item.description.length-20, 'start', '...']}}
+    </div> -->
+    <div class="card-footer">
+      <p>{{item.creationDate}}</p>
+      <button mat-stroked-button>
+        <a [routerLink]="['/', 'post', item._id]" [state]="{ id:item._id}"> Read More</a>
+      </button>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,89 @@
+
+.main-Signup {
+    position: absolute;
+    top: 18%;
+    left: 40%;
+}
+
+.Signup-scr {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.signup-btn {
+    width: 50%;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #0D6EFD;
+    padding: 13px 25px;
+}
+
+
+.signup-title {
+    font-size: larger;
+}
+
+.sup {
+    padding: 10px;
+}
+
+.sup div input {
+    width: 250px;
+    height: 100%;
+    outline: none;
+    padding: 15px 18px 15px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    box-shadow: 4px 4px #ccc;
+
+}
+
+
+.sup div select {
+    width: 290px;
+    height: 100%;
+    outline: none;
+    padding: 15px 18px 15px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+.sup div input::placeholder,
+.sup div select:placeholder {
+    color: #bfbfbf;
+}
+
+.sup div input:focus,
+.sup div select:focus {
+    border: 2px solid #0D6EFD;
+}
+
+select {
+    color: #878686;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 18px;
+    /* color: #1c87c9; */
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+    
+}
+
+.drop-control option {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    background-color:#eee;
+}
+option:hover {
+    background-color: #ff0000;
+}

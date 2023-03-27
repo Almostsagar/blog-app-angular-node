@@ -1,0 +1,31 @@
+.toolbar{
+    display: flex;
+    flex-direction: row;
+    background-color: #395c80;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+  } 
+   .toolbar-heading {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    color: white;
+    font-weight: 600; 
+    margin-left: 80px;
+  } 
+  
+  .toolbar-login-signup{
+    display: flex;
+    color: white;
+    font-weight: 600; 
+    margin-right: 180px;
+    flex-direction: row;
+    
+  } 
+  .toolbar-login-signup .signup{
+    margin-left: 20px;
+    padding-right: 5px;
+  } 
+  

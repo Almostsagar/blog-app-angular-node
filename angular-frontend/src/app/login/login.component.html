@@ -1,0 +1,51 @@
+<div class="main-login">
+  <div>
+    <div class="login-title">Login</div>
+    <form class="Login-scr" (ngSubmit)="login()">
+      <div class="sup">
+        <div class="emailform">
+          <input
+            required
+            id="email"
+            type="email"
+            name="email"
+            [(ngModel)]="form.email"
+            placeholder="Ex. pat@example.com"
+            [formControl]="emailFormControl" matInput 
+            (focus)="true"
+          />
+          <div *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </div>
+          <div *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </div>
+          <div *ngIf="errorMessage=='cannot find user'">
+            User not <strong>found</strong>
+          </div>
+        </div>
+       
+      </div>
+      <div class="sup">
+        <div class="passwordform">
+          <input
+            required      
+            id="password"  
+            name="password"
+            type="password"    
+            [(ngModel)]="form.password"
+            placeholder="Enter password"   
+            [formControl]="passwordControl" matInput          
+          />          
+          <div *ngIf="passwordControl.hasError('required')">
+            Password is <strong>required</strong>
+          </div>
+          <div *ngIf="errorMessage=='401'">
+            Password is <strong>Incorrect</strong>
+          </div>
+        </div>
+      </div>
+      <button mat-raised-button type="submit" class="login-btn">Login</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+.main-login {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+} 
+
+.Login-scr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.login-btn{
+    width: 50%;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #0D6EFD;
+    padding: 13px 25px;
+}
+.login-title{
+    font-size: larger;
+}
+
+
+.sup {
+    padding: 10px;
+}
+
+.sup div input {
+    width: 250px;
+    height: 100%;
+    outline: none;
+    padding: 15px 18px 15px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    box-shadow: 4px 4px #ccc;
+
+}
+

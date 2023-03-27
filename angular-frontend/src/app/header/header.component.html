@@ -1,0 +1,20 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner"  >
+  <div class="toolbar-heading" routerLink="/dashboard">Dashboard</div>
+  <div [ngSwitch]="this.t.getUser().__v">
+    <ng-container *ngSwitchDefault>
+      <div class="toolbar-login-signup">
+        <div class="login" routerLink="/login">Login</div>
+        <div class="signup" routerLink="/signup">Signup</div>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="0">
+      <div class="toolbar-login-signup">
+        <div class="login" routerLink="/profile">
+          {{ this.t.getUser().firstname }}
+        </div>
+        <div class="signup" (click)="logout()">Logout</div>
+      </div>
+    </ng-container>
+  </div>
+</div>

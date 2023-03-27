@@ -1,0 +1,132 @@
+.post-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-main {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+.post-main .timeandcat {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.post-main h2 {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.post-main p {
+    font-size: medium;
+    font-weight: 200;
+}
+
+.post-main .post-author {
+    display: flex;
+    padding-top: 10px;
+}
+
+.post-main .post-author img {
+    margin: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.post-author-name p {
+    margin: 0;
+    padding: 0;
+}
+
+.post-author-name .x {
+    font-size: smaller;
+    color: grey;
+    font-size: large;
+}
+
+.post-author-name .x a {
+    text-decoration: none;
+}
+
+
+.post-author-name .x a {
+    text-decoration: none;
+}
+
+.post-author-name .x a:hover {
+    text-decoration: underline;
+}
+
+.post-desc {
+    width: 800px;
+}
+
+.commentbox .txt {
+    font-size: larger;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form {
+    margin-top: 10px;
+}
+
+.comment-form {
+    border: 1px solid #d5d5d5;
+    padding: 18px;
+}
+
+.commentbox .txt {
+    padding-bottom: 5px;
+}
+
+.commentsubmit {
+    width: 80px;
+    align-items: center;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px solid #d5d5d5;
+    padding: 20px;
+}
+
+.comments .commenter {
+    font-weight: 400;
+}
+
+.comments .comment {
+    font-weight: 200;
+}
+
+.sup div textarea {
+    width: 720px;
+    height: 100%;
+    outline: none;
+    padding: 15px 18px 15px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    box-shadow: 4px 4px #ccc;
+
+}
+
+.commentsubmit{    
+    width: 25%;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #0D6EFD;
+    padding: 13px 25px;
+}

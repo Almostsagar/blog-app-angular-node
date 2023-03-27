@@ -1,0 +1,10 @@
+<form (ngSubmit)="submitcat()">
+    <input type="text" name="cat" id="cat" [(ngModel)]="form.title">
+    <button type="submit">Add</button>
+</form>
+<div *ngFor="let c of cat" class="flex-div">
+  <div>{{ c.title }}</div>
+  <button type="submit">Update</button>
+  <button type="submit" (ngSubmit)="deletecat(c.id)">Delete</button>
+</div>
+

@@ -1,0 +1,141 @@
+<div class="main-Signup">
+  <div>
+    <div class="signup-title">Signup</div>
+    <form (ngSubmit)="signup()" class="Signup-scr">
+      <div class="sup">
+        <div class="firstnamefield">
+          <input
+            type="text"
+            name="firstname"
+            matInput
+            matNativeControl
+            placeholder="Enter your first name"
+            [(ngModel)]="form.firstname"
+            [formControl]="fname"
+          />
+          <div *ngIf="fname.hasError('required')">
+            Firstname is <strong>required</strong>
+          </div>
+        </div>
+      </div>
+      <div class="sup">
+        <div class="lastnamefield">
+          <input
+            type="text"
+            name="lastname"
+            matInput
+            matNativeControl
+            placeholder="Enter your last name"
+            [(ngModel)]="form.lastname"
+            required
+            [formControl]="lname"
+          />
+          <div *ngIf="lname.hasError('required')">
+            Lastname is <strong>required</strong>
+          </div>
+        </div>
+      </div>
+      <div class="sup">
+        <div class="emailfield">
+          <input
+            type="email"
+            name="email"
+            placeholder="Ex. pat@example.com"
+            matNativeControl
+            [(ngModel)]="form.email"
+            [formControl]="emailFormControl"
+            matInput
+          />
+          <div
+            *ngIf="
+              emailFormControl.hasError('email') &&
+              !emailFormControl.hasError('required')
+            "
+          >
+            Please enter a valid email address
+          </div>
+          <div *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </div>
+          <div *ngIf="errorMessage == 'user already found'">
+            User already <strong>found</strong>
+          </div>
+        </div>
+      </div>
+      <div class="sup">
+        <div class="passwordfield">
+          <input
+            matInput
+            placeholder="Enter password"
+            name="password"
+            matNativeControl
+            type="password"
+            [(ngModel)]="form.password"
+            [formControl]="passwordControl"
+          />
+          <div
+            *ngIf="
+              passwordControl.hasError('minlength') &&
+              !passwordControl.hasError('maxLength')
+            "
+          >
+            Please enter a valid Password
+          </div>
+          <div *ngIf="passwordControl.hasError('required')">
+            Password is <strong>required</strong>
+          </div>
+          <div *ngIf="errorMessage == '401'">
+            Password is <strong>Incorrect</strong>
+          </div>
+        </div>
+      </div>
+      <div class="sup">
+        <div class="cnfpasswordfield">
+          <input
+            matInput
+            placeholder="Confirm password"
+            name="cnfpassword"
+            matNativeControl
+            type="password"
+            [(ngModel)]="form.cnfpassword"
+            [formControl]="cnfpasswordControl"
+          />
+          <div
+            *ngIf="
+              cnfpasswordControl.hasError('minlength') &&
+              !cnfpasswordControl.hasError('maxLength')
+            "
+          >
+            Please enter a valid Password
+          </div>
+          <div *ngIf="cnfpasswordControl.hasError('required')">
+            Password is <strong>required</strong>
+          </div>
+          <div *ngIf="errorMessage == 'passwords didn\'t match'">
+            Password didn't <strong>match</strong>
+          </div>
+        </div>
+      </div>
+      <div class="sup">
+        <div class="roledropdown">
+          <select
+            class="drop-control"
+            id="role"
+            required="true"
+            name="role"
+            [(ngModel)]="form.role"
+            [formControl]="role"
+          >
+            <option *ngFor="let r of roles" [value]="r.title" selected>
+              {{ r.title }}
+            </option>
+          </select>
+          <div *ngIf="role.hasError('required')">
+            Role is <strong>required</strong>
+          </div>
+        </div>
+      </div>
+      <button mat-raised-button class="signup-btn" type="submit">Signup</button>
+    </form>
+  </div>
+</div>
