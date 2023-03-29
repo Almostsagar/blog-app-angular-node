@@ -1,1 +1,46 @@
-<p>admin-update-post works!</p>
+<div class="updatepost">
+  <form action="" class="update-post-form">
+    <div class="updatetitle">Update Post</div>
+    <div class="titlebox">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" />
+    </div>
+
+    <div class="statusdrip">
+      <label for="title">Status</label>
+      <select class="drop-control" id="role" required="true" name="role">
+        <option>f</option>
+        <option>g</option>
+      </select>
+    </div>
+
+    <div class="categorydrip">
+      <label for="title">Category</label>
+      <select class="drop-control" id="role" required="true" name="role">
+        <option>f</option>
+        <option>g</option>
+      </select>
+    </div>
+
+    <div class="imagesrc">
+      <label for="title">Image src</label>
+      <input type="text" name="img" id="img" />
+    </div>
+    <div class="commentsbox">
+      <label for="title">Comments</label>
+      <div class="ff" style="display: flex; flex-direction: row">
+        <div>comment</div>
+        <div><button>delete</button></div>
+      </div>
+    </div>
+    <div class="descbox">
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="30"
+      ></textarea>
+    </div>
+    <div><button type="submit">Update</button></div>
+  </form>
+</div>

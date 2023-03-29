@@ -1,0 +1,50 @@
+.updatepost {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+}
+
+input {
+    width: 150px;
+}
+
+select {
+    width: 150px;
+}
+
+.updatetitle {
+    font-size: 18px;
+    align-items: center;
+}
+
+ div input {
+    width: 250px;
+    height: 100%;
+    outline: none;
+    padding: 11px 18px 11px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    box-shadow: 4px 4px #ccc;
+
+}
+
+ div select {
+    width: 290px;
+    height: 100%;
+    outline: none;
+    padding: 15px 18px 15px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+
+.update-post-form{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+}

@@ -20,5 +20,8 @@ export class AdminCreateNewPostComponent implements OnInit{
           this.router.navigate(['/login']);        
         }
       }
+      if (this.t.getlength() == 0) {
+        this.router.navigate(['/login']);
+    }
     }
 }

@@ -28,10 +28,15 @@ export class AddCategoryComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     }
+    if (this.t.getlength() == 0) {
+        this.router.navigate(['/login']);
+    }
     this.getdata()
     // this.refreshData()
   }
   getdata(){
+    console.log("lol");
+    
     this.http.get<any>('http://localhost:3000/category/').subscribe((data) => {
       this.cat = data;
       console.log(data);
@@ -48,7 +53,9 @@ export class AddCategoryComponent implements OnInit {
       });
       this.getdata()
   }
-  deletecat(catid){
+  deletecat(catid: any){
+    console.log(catid);
+    
     this.http
     .post<any>('http://localhost:3000/category/remove/' + catid, {
       title: this.form.title,

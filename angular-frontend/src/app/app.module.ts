@@ -31,6 +31,7 @@ import { AdminHeaderComponent } from './admin/admin-header/admin-header.componen
 import { AdminAddUsersComponent } from './admin/admin-add-users/admin-add-users.component';
 import { AdminPostsDashboardComponent } from './admin/admin-posts-dashboard/admin-posts-dashboard.component';
 import { AdminUpdatePostComponent } from './admin/admin-update-post/admin-update-post.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 
 
@@ -72,7 +73,8 @@ import { AdminUpdatePostComponent } from './admin/admin-update-post/admin-update
     HttpClientModule,
     MatSelectModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    EditorModule
   ],
   providers: [{ provide: AuthGuard, useClass: AuthGuard }],
   bootstrap: [AppComponent]

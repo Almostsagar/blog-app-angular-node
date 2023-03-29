@@ -29,6 +29,9 @@ export class AdminHeaderComponent {
     else{
       this.isadmin=false;
     }
+    if (this.t.getlength() == 0) {
+      this.router.navigate(['/login']);
+  }
     // console.log(this.isadmin);
     
   }

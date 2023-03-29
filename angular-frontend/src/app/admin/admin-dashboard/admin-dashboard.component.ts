@@ -20,6 +20,9 @@ export class AdminDashboardComponent implements OnInit{
         this.router.navigate(['/login']);        
       }
     }
+    if (this.t.getlength() == 0) {
+      this.router.navigate(['/login']);
+  }
   }
 
   reloadComponent() {
