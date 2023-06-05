@@ -32,6 +32,7 @@ import { AdminAddUsersComponent } from './admin/admin-add-users/admin-add-users.
 import { AdminPostsDashboardComponent } from './admin/admin-posts-dashboard/admin-posts-dashboard.component';
 import { AdminUpdatePostComponent } from './admin/admin-update-post/admin-update-post.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { HeadersCompComponent } from './headers-comp/headers-comp.component';
 
 
 
@@ -58,7 +59,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     AdminHeaderComponent,
     AdminAddUsersComponent,
     AdminPostsDashboardComponent,
-    AdminUpdatePostComponent
+    AdminUpdatePostComponent,
+    HeadersCompComponent
     
   ],
   imports: [

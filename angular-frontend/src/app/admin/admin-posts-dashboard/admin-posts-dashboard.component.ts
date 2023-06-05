@@ -30,7 +30,6 @@ export class AdminPostsDashboardComponent implements OnInit {
   }
   getdata(){
     console.log("lol");
-    
     this.http.get<any>('http://localhost:3000/posts').subscribe((data) => {
       this.posts = data;
       console.log(data);

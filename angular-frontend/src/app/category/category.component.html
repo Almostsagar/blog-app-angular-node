@@ -3,18 +3,10 @@
     <div class="category-posts">
         <div class="flat-card">
           <p>Posts</p>
-          <mat-card class="category-post-card" *ngFor="let post of posts">
+          <mat-card class="category-post-card" *ngFor="let post of itemCount">
             <mat-card-header>
-              <mat-card-title
-              
-                >10 Best Cyber Security Jobs in 2023 (Salary
-                Included)</mat-card-title>
-              <mat-card-subtitle>
-                A website can have defects or bugs, and it is the job of the Quality
-                Assurance and Quality Control testers to test it with the right
-                tools before it is released. With the increasing erferferfferwnumber
-                of ready and available products, software...</mat-card-subtitle
-              >
+              <mat-card-title>{{post.title}}</mat-card-title>
+              <mat-card-subtitle [innerHTML]="post.description | truncate:[100, post.description.length-100, 'start', '...']"></mat-card-subtitle>
             </mat-card-header>
             <mat-card-actions align="end">
               <button mat-button>LIKE</button>

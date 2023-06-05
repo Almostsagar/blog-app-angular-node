@@ -18,20 +18,38 @@ export class CategoryComponent implements OnInit {
     private formBuilder: FormBuilder,
     private l: LoginSerivesService,
     private t: TokenStorageService
-  ) {
+      ) {
     this.cat_id = this.router.getCurrentNavigation().extras.state;
   }
-
+  posts: any = [];
+  itemCount: any = [];
   ngOnInit(): void {
     this.http
         .get<any>('http://localhost:3000/category/' + this.cat_id.id)
         .subscribe((data) => {
-          // this.post = data;
-          console.log(data);
+          this.posts = data;
+          this.itemCount = this.posts;
           // this.creationDate=this.post.creationDate.substring(0,10)
         });
-    this.posts = [1, 2, 3, 4];
     console.log(this.cat_id);    
   }
-  posts: any = [];
+}
+
+
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'truncate',
+})
+export class TruncatePipe implements PipeTransform {
+  transform(value: string, args: any[]): string {
+    const limit = 100;
+    const trail = '...';
+    return value.length > limit
+      ? (args[2] === 'end' ? trail : '') +
+          value.substr(args[0], limit) +
+          (args[2] === 'start' ? trail : '')
+      : value;
+  }
 }

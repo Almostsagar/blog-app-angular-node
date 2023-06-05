@@ -10,8 +10,15 @@
     <td>{{ p.title }}</td>
     <td>{{ p.user.firstname }}</td>
     <td>{{ p.category.title }}</td>
-    <td><button [routerLink]="['/admin', 'post-dashboard', 'update-post']">Update</button></td>
-    <td><button >Delete</button></td>
+    <td>
+      <button
+        [routerLink]="['/admin', 'post-dashboard', 'update-post']"
+        [state]="{ id: p.id }"        
+      >
+        Update
+      </button>
+    </td>
+    <td><button>Delete</button></td>
   </tr>
 </table>
 

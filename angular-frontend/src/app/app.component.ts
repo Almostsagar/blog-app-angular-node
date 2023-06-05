@@ -17,17 +17,9 @@ export class AppComponent implements OnInit {
     private router: Router
   ) {}
   role: any;
-  isadmin: boolean = false;
-  isnormal: boolean = true;
   ngOnInit() {
     console.log(this.title);    
     this.title = 'Title Updated';
-    this.user = this.t.getUser();
-       if (this.t.getlength()!=0) {
-        if (this.user.role.title == 'Admin') {
-          this.isadmin = true;
-          this.isnormal = false;
-        } 
-       }    
+     
   }
 }
